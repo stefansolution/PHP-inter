@@ -1,0 +1,11 @@
+# AddHandler application/x-httpd-php71 .php
+# RewriteEngine On
+
+ # RewriteCond %{HTTPS} off
+ # RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+<FilesMatch "\.(js|css)$">
+  ExpiresActive On
+  ExpiresDefault "access plus 1 weeks"
+</FilesMatch>
+
